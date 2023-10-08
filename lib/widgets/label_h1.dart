@@ -11,7 +11,7 @@ class LabelH1 extends StatelessWidget {
     return Text(label,
         style: TextStyle(
             fontSize: Breakpoints.b24,
-            color: color ?? Colors.deepOrange,
+            color: color ?? Colors.purple[800],
             fontWeight: FontWeight.w500));
   }
 }

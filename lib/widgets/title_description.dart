@@ -16,7 +16,10 @@ class TitleDescription extends StatelessWidget {
       Center(
         child: Padding(
             padding: const EdgeInsets.only(bottom: Breakpoints.b16),
-            child: LabelH1(label: titulo)),
+            child: LabelH1(
+              label: titulo,
+              color: Colors.purple[800],
+            )),
       ),
       LabelH2(label: descricao),
     ]);

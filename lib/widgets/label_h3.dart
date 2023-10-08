@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
 class LabelH3 extends StatelessWidget {
-  const LabelH3({super.key, required this.instrucao});
+  const LabelH3({super.key, required this.label});
 
-  final String instrucao;
+  final String label;
   @override
   Widget build(BuildContext context) {
-    return Text(instrucao,
+    return Text(label,
         textAlign: TextAlign.justify,
         style: const TextStyle(
             fontSize: 16, color: Colors.black, fontWeight: FontWeight.w400));

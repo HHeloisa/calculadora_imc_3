@@ -1,11 +1,22 @@
 import 'package:calculadora_imc_2/constants/string.dart';
 import 'package:calculadora_imc_2/pages/about.page.dart';
 import 'package:calculadora_imc_2/pages/home.page.dart';
-import 'package:calculadora_imc_2/pages/input_data.page.dart';
-import 'package:calculadora_imc_2/pages/result.page.dart';
+import 'package:calculadora_imc_2/pages/imc.page.dart';
+import 'package:calculadora_imc_2/services.dart/sqlite.dart';
 import 'package:flutter/material.dart';
+// import 'package:hive/hive.dart';
+// import 'package:path_provider/path_provider.dart' as path_provider;
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+
+  /// Preciso do path provider para utilizar o Hive
+  // var documentsDirectory =
+  //     await path_provider.getApplicationDocumentsDirectory();
+  // Hive.init(documentsDirectory.path);
+
+  /// iniciando o sqlite
+  await SQLiteDataBase().obterDataBase();
   runApp(const MyApp());
 }
 
@@ -23,8 +34,7 @@ class MyApp extends StatelessWidget {
       initialRoute: '/',
       routes: {
         '/about': (context) => const AboutPage(),
-        '/input_data': (context) => const InputDataPage(),
-        '/result': (context) => const ResultPage(),
+        '/imc': (context) => const IMCPage(),
       },
     );
   }

@@ -1,7 +1,7 @@
 import 'dart:math';
 
 import 'package:calculadora_imc_2/constants/string.dart';
-import 'package:calculadora_imc_2/models/pessoamodel..dart';
+import 'package:calculadora_imc_2/models/pessoa.model.dart';
 
 import '../models/imc.model.dart';
 
@@ -10,46 +10,35 @@ class IMCViewModel {
   String? imcCategoryDefinition;
   double? imc;
 
-  IMCResult? calcularIMC(Pessoa pessoa) {
+  double? calcularIMC(Pessoa pessoa) {
     userData = IMC(altura: pessoa.altura, peso: pessoa.peso);
     var alturaMetros = pessoa.altura / 100;
 
     var imcFixed = (pessoa.peso / pow(alturaMetros, 2)).toStringAsFixed(2);
     imc = double.parse(imcFixed);
-    return setImcInformations(imc!);
+    return imc;
   }
 
-  setImcInformations(double imc) {
+  getIMCCategory(double imc) {
     if (imc < 16.5) {
-      imcCategoryDefinition = imcCategory1;
-      return IMCResult(imc, imcCategoryDefinition!);
+      return imcCategory1;
     } else if (imc > 16.5 && imc < 18.5) {
-      imcCategoryDefinition = imcCategory2;
-      return IMCResult(imc, imcCategoryDefinition!);
+      return imcCategory2;
     } else if (imc >= 18.5 && imc < 24.9) {
-      imcCategoryDefinition = imcCategory3;
-      return IMCResult(imc, imcCategoryDefinition!);
+      return imcCategory3;
     } else if (imc >= 24.9 && imc < 29.9) {
-      imcCategoryDefinition = imcCategory4;
-      return IMCResult(imc, imcCategoryDefinition!);
+      return imcCategory4;
     } else if (imc >= 30 && imc < 34.99) {
-      imcCategoryDefinition = imcCategory5;
-      return IMCResult(imc, imcCategoryDefinition!);
+      return imcCategory5;
     } else if (imc >= 35 && imc < 39.9) {
-      imcCategoryDefinition = imcCategory6;
-      return IMCResult(imc, imcCategoryDefinition!);
+      return imcCategory6;
     } else {
-      imcCategoryDefinition = imcCategory7;
-      return IMCResult(imc, imcCategoryDefinition!);
+      return imcCategory7;
     }
   }
 
   String getMessageResult(imc, imcCategoryDefinition) {
     return "Seu IMC é $imc e está classificado como: $imcCategoryDefinition";
-  }
-
-  static bool contemLetra(String texto) {
-    return RegExp(r'[a-zA-Z]').hasMatch(texto);
   }
 }
 

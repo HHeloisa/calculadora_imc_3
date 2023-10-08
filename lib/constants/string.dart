@@ -2,8 +2,8 @@
 const aboutMe = "Sobre mim e este projeto";
 const aboutDescription =
     "Meu nome é Heloísa Junges Hackenhaar, tenho 28 anos. Sou graduada em Bacharelado e Licenciatura em Ciências Sociais, e em Desenvolvimento WEB pela Trybe. \n\nEste projeto foi desenvolvido como desafio no bootcamp de Flutter do Santander em parceria com a DIO. \n\nO desafio consiste em desenvolver um aplicativo de uma calculadora de IMC.";
-const nome = "Heloísa Junges Hackenhaar";
-const contato = "hhackenhaar@gmail.com";
+const myName = "Heloísa Junges Hackenhaar";
+const contact = "hhackenhaar@gmail.com";
 const githubUser = "HHeloisa";
 const about = "Sobre";
 const backToHome = "Voltar para tela principal";
@@ -13,6 +13,8 @@ const endOfIcons = "Ops, acabaram os ícones!";
 const projectTitle = "Calculadora de IMC";
 const whannaKnow = "Quero saber meu IMC";
 const userRegister = "Informes seus dados";
+
+const voltar = "Voltar";
 
 const String omsAboutIMC1 =
     "A Organização Mundial da Saúde (OMS) define o diagnóstico de obesidade através do índice de massa corporal (IMC), que é calculado utilizando a altura e o peso do indivíduo (IMC = peso (kg) / altura (m)2).";
@@ -32,3 +34,13 @@ const String imcCategory7 = "Obesidade classe III";
 const String onlyNumbersException = "Por favor, insira apenas números.";
 
 const String result = "Seus resultados";
+
+const String name = "Name";
+const String heigthCM = 'Altura (cm)';
+const String weigth = 'Peso (kg)';
+const String insertName = 'Por favor, insira um nome';
+const String insertHeigth = 'Por favor, insira uma altura';
+const String insertWeigth = 'Por favor, insira um peso';
+const String calculate = "Calcular";
+const String somethingWrong =
+    'Ops, algo deu errado. Por favor, tente novamente';
