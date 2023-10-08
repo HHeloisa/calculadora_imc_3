@@ -14,7 +14,10 @@ Conteúdos aprendidos ao longo do módulo e desenvolvimento do projeto.
 - Hive (anotações ao longo do projeto)
 - SQLite (utilizado no projeto)
 
-
-<img src="/lib/readme_images/home.png" width="150" height="250">
-<img src="/lib/readme_images/imc.png" width="150" height="250">
-<img src="/lib/readme_images/about.png" width="150" height="250">
+<table>
+  <tr>
+<img src="/lib/readme_images/home.png" width="150" height="350">
+<img src="/lib/readme_images/imc.png" width="150" height="350">
+<img src="/lib/readme_images/about.png" width="150" height="350">
+  </tr>
+</table>
